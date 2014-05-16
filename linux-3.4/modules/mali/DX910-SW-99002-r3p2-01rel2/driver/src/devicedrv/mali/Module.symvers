@@ -1,0 +1,4 @@
+0xb9ac0503	mali_set_user_setting	/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0x94289922	mali_pmu_powerdown	/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0xf8224b12	mali_get_user_setting	/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0x706fc943	mali_pmu_powerup	/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL

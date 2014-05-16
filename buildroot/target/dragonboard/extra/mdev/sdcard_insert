@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ -d /sys/block/*/$MDEV ]  ; then
+  mkdir -p /mnt/sdcard/$MDEV
+  mount /dev/$MDEV /mnt/sdcard/$MDEV 
+fi

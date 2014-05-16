@@ -1,0 +1,356 @@
+image.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/common/image.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/mkimage.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/os_support.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/sha1.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/fdt_host.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/libfdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/libfdt_env.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt_support.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/u-boot/md5.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/image.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/libfdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/fdt_support.h
+crc32.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/crc32.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/u-boot/crc.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/u-boot/zlib.h
+md5.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/md5.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/u-boot/md5.h
+sha1.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/sha1.c \
+ /usr/include/string.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/xlocale.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/watchdog.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/sha1.h
+fdt.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/fdt.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/libfdt_env.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/fdt_host.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/libfdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt_support.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/libfdt_internal.h
+fdt_ro.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/fdt_ro.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/libfdt_env.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/fdt_host.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/libfdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt_support.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/libfdt_internal.h
+fdt_rw.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/fdt_rw.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/libfdt_env.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/fdt_host.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/libfdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt_support.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/libfdt_internal.h
+fdt_strerror.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/fdt_strerror.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/libfdt_env.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/fdt_host.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/libfdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt_support.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/libfdt_internal.h
+fdt_wip.o: \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/fdt_wip.c \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/libfdt_env.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/compiler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stddef.h \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/byteswap.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/fdt_host.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/libfdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/include/fdt.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/tools/../include/fdt_support.h \
+ /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/u-boot/lib/libfdt/libfdt_internal.h

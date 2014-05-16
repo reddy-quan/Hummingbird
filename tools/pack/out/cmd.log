@@ -1,0 +1,17 @@
+/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/pctools/linux/eDragonEx/
+/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out
+Begin Parse sys_partion.fex
+Add partion bootloader.fex BOOTLOADER_FEX00
+Add partion very bootloader.fex BOOTLOADER_FEX00
+FilePath: bootloader.fex
+FileLength=678c00Add partion env.fex ENV_FEX000000000
+Add partion very env.fex ENV_FEX000000000
+FilePath: env.fex
+FileLength=20000Add partion boot.fex BOOT_FEX00000000
+Add partion very boot.fex BOOT_FEX00000000
+FilePath: boot.fex
+FileLength=bc8000Add partion rootfs.fex ROOTFS_FEX000000
+Add partion very rootfs.fex ROOTFS_FEX000000
+FilePath: rootfs.fex
+FileLength=12000000BuildImg 0
+Dragon execute image.cfg SUCCESS !

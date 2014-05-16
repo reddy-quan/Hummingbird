@@ -1,0 +1,97 @@
+argc = 2
+input name sys_config.fex
+Script 1 source file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_config.fex
+Script 1 bin file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_config.bin
+parser 1 file ok
+----------
+argc = 2
+input name sys_partition.fex
+Script 1 source file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_partition.fex
+Script 1 bin file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_partition.bin
+parser 1 file ok
+----------
+mbr count = 4
+
+partitation file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_partition.bin
+mbr_name file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sunxi_mbr.fex
+download_name file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/dlinfo.fex
+
+mbr size = 16384
+mbr magic softw411
+disk name=bootloader
+disk name=env
+disk name=boot
+disk name=rootfs
+this is not a partition key
+crc 0 = 91cba8a9
+crc 1 = 476f9f4
+crc 2 = 61c00c52
+crc 3 = f47d5d0f
+update mbr file ok
+----------
+argc = 2
+input name test_config.fex
+Script 1 source file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/test_config.fex
+Script 1 bin file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/test_config.bin
+parser 1 file ok
+----------
+storage_type=0
+
+boot0 file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/boot0_nand.bin
+script file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_config.bin
+
+script update boot0 ok
+----------
+storage_type=1
+
+boot0 file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/boot0_sdcard.fex
+script file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_config.bin
+
+script update boot0 ok
+----------
+
+uboot file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/boot1_nand.fex
+script file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_config.bin
+
+boot1 length = 5c000
+total length = 68000
+checksum=52a5b5c5
+----------
+
+uboot file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/boot1_sdcard.fex
+script file Path=/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/sys_config.bin
+
+boot1 length = 3c000
+total length = 48000
+checksum=5e42bcfb
+----------
+disk : c
+CopyRootToFS(/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out/bootfs)
+
+c:\linux
+
+c:\os_show
+c:\magic.bin
+find magic !! 
+RealLen=0x678C00
+CPlugin Free lib 
+CPlugin Free lib 
+----------
+/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/pctools/linux/eDragonEx/
+/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/tools/pack/out
+Begin Parse sys_partion.fex
+Add partion bootloader.fex BOOTLOADER_FEX00
+Add partion very bootloader.fex BOOTLOADER_FEX00
+FilePath: bootloader.fex
+FileLength=678c00Add partion env.fex ENV_FEX000000000
+Add partion very env.fex ENV_FEX000000000
+FilePath: env.fex
+FileLength=20000Add partion boot.fex BOOT_FEX00000000
+Add partion very boot.fex BOOT_FEX00000000
+FilePath: boot.fex
+FileLength=bc8000Add partion rootfs.fex ROOTFS_FEX000000
+Add partion very rootfs.fex ROOTFS_FEX000000
+FilePath: rootfs.fex
+FileLength=12000000BuildImg 0
+Dragon execute image.cfg SUCCESS !
+----------

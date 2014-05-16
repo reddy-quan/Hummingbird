@@ -1,0 +1,2 @@
+/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/nand/nand.ko
+/disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/nand/nand_interface.o /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/nand/nfd/nand_blk.o /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/nand/nfd/nand_osal_for_linux.o /disk2/kylin/开发板共享目录/蜂鸟/v3.0/V3/MerriiLinux/linux-3.4/modules/nand/libnand.a

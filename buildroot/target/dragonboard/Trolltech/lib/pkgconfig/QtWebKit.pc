@@ -1,0 +1,19 @@
+prefix=/opt/Trolltech
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtWebKit
+qt_config=lex yacc uic resources qt release incremental link_prl def_files_disabled no_mocdepend release stl qt_no_framework cross_compile release shared dll embedded largefile stl exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build building-libs depend_includepath standalone_package depend_includepath embedded qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_libtool create_pc link_pkgconfig no_debug_info moc thread shared dll
+moc_location=/opt/Trolltech/bin/moc
+uic_location=/opt/Trolltech/bin/uic
+rcc_location=/opt/Trolltech/bin/rcc
+lupdate_location=/opt/Trolltech/bin/lupdate
+lrelease_location=/opt/Trolltech/bin/lrelease
+
+Name: Qtwebkit
+Description: Qtwebkit Library
+Version: 4.7.4
+Libs: -L${libdir} -lQtWebKit 
+Libs.private: -L/opt/Trolltech/lib -L../JavaScriptCore/release  -ljscore -L/opt/Trolltech/lib -lQtGui -lQtNetwork -lQtCore -lpthread   
+Cflags: -DQT_SHARED -I/opt/Trolltech/include -I${includedir}
+Requires: QtCore QtGui QtNetwork
+

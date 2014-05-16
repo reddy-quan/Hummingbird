@@ -1,0 +1,619 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+sysclk_bak          0x4               standby_clock.o
+pio_int_deb_back    0x4               standby_clock.o
+cpu_ms_loopcnt      0x4               standby_clock.o
+debugger_buffer     0x100             ./../mem_printk.o
+pm_info             0x6c              standby.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                __standby_start = .
+
+.text           0xf0000000     0x76ac
+ standby.o(.text.startup)
+ *(.text)
+ .text          0xf0000000      0x6f0 standby.o
+                0xf0000000                main
+ .text          0xf00006f0       0xcc common.o
+                0xf00006f0                standby_memcpy
+                0xf0000788                standby_mdelay
+ .text          0xf00007bc      0xbd8 standby_clock.o
+                0xf00007bc                standby_clk_init
+                0xf00008d8                standby_clk_exit
+                0xf00009b4                standby_clk_core2losc
+                0xf00009f8                standby_clk_core2hosc
+                0xf0000a40                standby_clk_core2pll
+                0xf0000a88                standby_clk_plldisable
+                0xf0000b4c                standby_clk_pllenable
+                0xf0000c10                standby_clk_hoscdisable
+                0xf0000c44                standby_clk_hoscenable
+                0xf0000c78                standby_clk_ldodisable
+                0xf0000cec                standby_clk_ldoenable
+                0xf0000d60                standby_clk_setdiv
+                0xf0000e28                standby_clk_getdiv
+                0xf0000ef0                standby_clk_set_pll_factor
+                0xf0000fc8                standby_clk_get_pll_factor
+                0xf0001090                standby_clk_dramgating
+                0xf00010ec                standby_clk_apb2losc
+                0xf0001124                standby_clk_apb2hosc
+                0xf0001158                standby_clk_apbinit
+                0xf00011d8                standby_clk_apbexit
+                0xf0001278                standby_clk_ahb_2pll
+                0xf00012d8                standby_clk_ahb_restore
+                0xf0001320                standby_pio_clk_src_init
+                0xf0001368                standby_pio_clk_src_exit
+ .text          0xf0001394       0x70 standby_ir.o
+                0xf0001394                standby_ir_init
+                0xf00013b0                standby_ir_exit
+                0xf00013cc                standby_ir_detect
+                0xf00013e8                standby_ir_verify
+ .text          0xf0001404      0x160 standby_key.o
+                0xf0001404                standby_key_init
+                0xf00014bc                standby_key_exit
+                0xf0001510                standby_query_key
+ .text          0xf0001564      0x994 standby_power.o
+                0xf0001564                standby_power_init
+                0xf000183c                standby_power_exit
+                0xf0001bc0                standby_set_voltage
+                0xf0001e00                standby_get_voltage
+ .text          0xf0001ef8      0x4c8 standby_tmr.o
+                0xf0001ef8                standby_tmr_init
+                0xf0002044                standby_tmr_exit
+                0xf0002124                standby_tmr_set
+                0xf00021f8                standby_tmr_enable_watchdog
+                0xf0002244                standby_tmr_disable_watchdog
+                0xf00022a0                standby_tmr_query
+                0xf0002314                standby_tmr_mdlay
+ .text          0xf00023c0      0x8c0 standby_twi.o
+                0xf00023c0                standby_twi_init
+                0xf0002498                standby_twi_exit
+                0xf00026a4                twi_byte_rw
+ .text          0xf0002c80       0x78 standby_usb.o
+                0xf0002c80                standby_usb_init
+                0xf0002c9c                standby_usb_exit
+                0xf0002cb8                standby_is_usb_status_change
+                0xf0002cdc                standby_query_usb_event
+ .text          0xf0002cf8       0x34 standby_delay.o
+                0xf0002cf8                standby_delay
+                0xf0002d20                standby_delay_cycle
+ .text          0xf0002d2c      0x770 dram/dram.o
+                0xf0002d2c                mctl_precharge_all
+                0xf0002d98                DRAMC_enter_selfrefresh
+                0xf0002ea8                mctl_mode_exit
+                0xf0002f14                DRAMC_exit_selfrefresh
+                0xf0002fe0                DRAMC_enter_power_down
+                0xf000304c                DRAMC_exit_power_down
+                0xf000305c                DRAMC_hostport_on_off
+                0xf00030e8                DRAMC_hostport_check_ahb_fifo_status
+                0xf000313c                DRAMC_hostport_setup
+                0xf0003214                mctl_ahb_reset
+                0xf0003330                dram_power_save_process
+                0xf00033d4                dram_enter_selfrefresh
+                0xf00033e4                dram_exit_selfrefresh
+                0xf00033f4                dram_enter_power_down
+                0xf0003404                dram_exit_power_down
+                0xf0003414                dram_hostport_on_off
+                0xf000343c                dram_hostport_check_ahb_fifo_status
+                0xf0003464                dram_hostport_setup
+ .text          0xf000349c     0x19fc dram/dram_init.o
+                0xf000349c                mctl_ddr3_reset
+                0xf0003510                mctl_set_drive
+                0xf000357c                mctl_itm_disable
+                0xf00035d4                mctl_itm_enable
+                0xf0003620                mctl_enable_dll0
+                0xf00036dc                mctl_enable_dllx
+                0xf00038e0                mctl_disable_dll
+                0xf0003a10                mctl_configure_hostport
+                0xf0003b00                mctl_setup_dram_clock
+                0xf0003d1c                DRAMC_init
+                0xf00044d4                DRAMC_scan_readpipe
+                0xf0004590                DRAMC_clock_output_en
+                0xf00045f4                DRAMC_set_autorefresh_cycle
+                0xf0004674                DRAMC_get_dram_size
+                0xf0004794                dram_init
+                0xf00047b0                save_mem_status
+                0xf00047cc                mctl_self_refresh_entry
+                0xf0004864                setup_dram_pll
+                0xf00049b4                dram_freq_jum
+                0xf0004d90                init_DRAM
+                0xf0004df4                dram_exit
+                0xf0004e10                dram_get_size
+                0xf0004e28                dram_set_clock
+                0xf0004e50                dram_set_drive
+                0xf0004e60                dram_set_autorefresh_cycle
+                0xf0004e80                dram_scan_readpipe
+ .text          0xf0004e98       0x28 ./../mem_delay.o
+                0xf0004e98                mem_delay
+ .text          0xf0004ec0      0x328 ./../pm_debug.o
+                0xf0004ec0                busy_waiting
+                0xf0004ef0                fake_busy_waiting
+                0xf0004f20                standby_dram_crc
+                0xf00050b4                io_init
+                0xf00050dc                io_init_high
+                0xf0005120                io_init_low
+                0xf0005164                io_high
+ *fill*         0xf00051e8       0x18 00
+ .text          0xf0005200      0x460 ./../mem_mmu_pc_asm.o
+                0xf0005200                save_sp
+                0xf000520c                save_sp_nommu
+                0xf0005218                restore_sp
+                0xf0005220                get_sp
+                0xf0005230                invalidate_dcache
+                0xf00052c4                invalidate_icache
+                0xf00052dc                flush_dcache
+                0xf0005378                flush_icache
+                0xf000539c                disable_cache
+                0xf00053bc                disable_dcache
+                0xf00053d8                disable_icache
+                0xf00053f4                disable_l2cache
+                0xf0005410                enable_cache
+                0xf0005430                enable_icache
+                0xf000544c                invalidate_branch_predictor
+                0xf0005464                disable_program_flow_prediction
+                0xf0005480                enable_program_flow_prediction
+                0xf000549c                mem_flush_tlb
+                0xf00054c0                mem_preload_tlb
+                0xf000554c                disable_mmu
+                0xf0005574                enable_mmu
+                0xf00055b4                jump_to_suspend
+                0xf00055d0                jump_to_resume
+                0xf00055f0                jump_to_resume0
+                0xf0005600                mem_preload_tlb_nommu
+ .text          0xf0005660      0x458 ./../mem_serial.o
+                0xf0005660                serial_init_nommu
+                0xf00056f8                serial_puts_nommu
+                0xf000571c                serial_gets_nommu
+                0xf00057a0                serial_init
+                0xf00059cc                serial_puts
+                0xf0005a34                serial_gets
+ .text          0xf0005ab8      0xfd8 ./../mem_printk.o
+                0xf0005ab8                strlen
+                0xf0005b0c                strcpy
+                0xf0005b88                strncpy
+                0xf0005c10                strcat
+                0xf0005cac                strncat
+                0xf0005d80                strcmp
+                0xf0005e20                strncmp
+                0xf0005f70                itoa
+                0xf0006130                utoa
+                0xf00062a4                printk
+                0xf0006664                print_align
+                0xf00066ec                printk_nommu
+ .text          0xf0006a90       0xfc ./../mem_divlibc.o
+                0xf0006a90                __div0
+                0xf0006aa8                raw_lib_udiv
+ .text          0xf0006b8c      0x2d8 ./../mem_int.o
+                0xf0006b8c                mem_int_init
+                0xf0006c7c                mem_int_exit
+                0xf0006d34                mem_enable_int
+                0xf0006dc8                mem_query_int
+ .text          0xf0006e64      0x5a8 ./../mem_timing.o
+                0xf0006e64                init_perfcounters
+                0xf0006ef4                backup_perfcounter
+                0xf0006f28                restore_perfcounter
+                0xf0006f5c                get_cyclecount
+                0xf0006f84                reset_counter
+                0xf0006fc0                change_runtime_env
+                0xf0007154                delay_us
+                0xf000722c                delay_ms
+                0xf00072e0                init_event_counter
+                0xf0007370                set_event_counter
+                0xf00073b4                get_event_counter
+ .text          0xf000740c      0x1a8 ./../mem_divlib.o
+                0xf000740c                Ldiv0
+                0xf000741c                __aeabi_uidiv
+                0xf00074b8                __aeabi_idiv
+                0xf0007584                __aeabi_uidivmod
+                0xf000759c                __aeabi_idivmod
+ *(.rodata)
+ .rodata        0xf00075b4       0x4c standby.o
+ .rodata        0xf0007600       0x14 standby_clock.o
+ .rodata        0xf0007614       0x38 ./../pm_debug.o
+ .rodata        0xf000764c       0x28 ./../mem_printk.o
+ .rodata        0xf0007674       0x1c ./../mem_divlibc.o
+ .rodata        0xf0007690       0x1c ./../mem_int.o
+
+.glue_7         0xf00076ac        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0xf00076ac        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0xf00076ac        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0xf00076ac        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0xf00076ac        0x0
+ .iplt          0x00000000        0x0 standby.o
+
+.rel.dyn        0xf00076ac        0x0
+ .rel.iplt      0x00000000        0x0 standby.o
+
+.data           0xf00076ac      0x174
+ *(.data)
+ .data          0xf00076ac        0x0 standby.o
+ .data          0xf00076ac        0x0 common.o
+ .data          0xf00076ac        0x0 standby_clock.o
+ .data          0xf00076ac        0x0 standby_ir.o
+ .data          0xf00076ac        0x0 standby_key.o
+ .data          0xf00076ac       0xe8 standby_power.o
+ .data          0xf0007794        0x0 standby_tmr.o
+ .data          0xf0007794        0xc standby_twi.o
+ .data          0xf00077a0        0x0 standby_usb.o
+ .data          0xf00077a0        0x0 standby_delay.o
+ .data          0xf00077a0        0x0 dram/dram.o
+ .data          0xf00077a0       0x80 dram/dram_init.o
+                0xf00077a0                hpcr_value
+ .data          0xf0007820        0x0 ./../mem_delay.o
+ .data          0xf0007820        0x0 ./../pm_debug.o
+ .data          0xf0007820        0x0 ./../mem_mmu_pc_asm.o
+ .data          0xf0007820        0x0 ./../mem_serial.o
+ .data          0xf0007820        0x0 ./../mem_printk.o
+ .data          0xf0007820        0x0 ./../mem_divlibc.o
+ .data          0xf0007820        0x0 ./../mem_int.o
+ .data          0xf0007820        0x0 ./../mem_timing.o
+ .data          0xf0007820        0x0 ./../mem_divlib.o
+                0xf0007820                __bss_start = .
+
+.igot.plt       0xf0007820        0x0
+ .igot.plt      0x00000000        0x0 standby.o
+
+.bss            0xf0007820      0x25c
+ *(.sbss)
+ *(.scommon)
+ *(.bss)
+ .bss           0xf0007820       0x64 standby.o
+ .bss           0xf0007884        0x0 common.o
+ .bss           0xf0007884       0x24 standby_clock.o
+ .bss           0xf00078a8        0x0 standby_ir.o
+ .bss           0xf00078a8       0x18 standby_key.o
+ .bss           0xf00078c0        0x0 standby_power.o
+ .bss           0xf00078c0       0x20 standby_tmr.o
+ .bss           0xf00078e0        0xc standby_twi.o
+ .bss           0xf00078ec        0x0 standby_usb.o
+ .bss           0xf00078ec        0x0 standby_delay.o
+ .bss           0xf00078ec        0x0 dram/dram.o
+ .bss           0xf00078ec        0x0 dram/dram_init.o
+ .bss           0xf00078ec        0x0 ./../mem_delay.o
+ .bss           0xf00078ec        0x4 ./../pm_debug.o
+                0xf00078ec                print_flag
+ .bss           0xf00078f0        0x0 ./../mem_mmu_pc_asm.o
+ .bss           0xf00078f0        0x0 ./../mem_serial.o
+ .bss           0xf00078f0        0x4 ./../mem_printk.o
+                0xf00078f0                dram_suspend_flag
+ .bss           0xf00078f4        0x0 ./../mem_divlibc.o
+ .bss           0xf00078f4        0x0 ./../mem_int.o
+ .bss           0xf00078f4       0x10 ./../mem_timing.o
+ .bss           0xf0007904        0x0 ./../mem_divlib.o
+ *(COMMON)
+ COMMON         0xf0007904       0x6c standby.o
+                0xf0007904                pm_info
+ COMMON         0xf0007970        0xc standby_clock.o
+                0xf0007970                sysclk_bak
+                0xf0007974                pio_int_deb_back
+                0xf0007978                cpu_ms_loopcnt
+ COMMON         0xf000797c      0x100 ./../mem_printk.o
+                0xf000797c                debugger_buffer
+                0xf0007a7c                __bss_end = .
+                0xf0007a7c                __standby_end = .
+LOAD common.o
+LOAD standby.o
+LOAD standby_clock.o
+LOAD standby_ir.o
+LOAD standby_key.o
+LOAD standby_power.o
+LOAD standby_tmr.o
+LOAD standby_twi.o
+LOAD standby_usb.o
+LOAD standby_delay.o
+LOAD dram/dram.o
+LOAD dram/dram_init.o
+LOAD ./../mem_delay.o
+LOAD ./../pm_debug.o
+LOAD ./../mem_mmu_pc_asm.o
+LOAD ./../mem_serial.o
+LOAD ./../mem_printk.o
+LOAD ./../mem_divlibc.o
+LOAD ./../mem_int.o
+LOAD ./../mem_timing.o
+LOAD ./../mem_divlib.o
+OUTPUT(standby.elf elf32-littlearm)
+
+.debug_info     0x00000000     0x7eac
+ .debug_info    0x00000000      0x56e standby.o
+ .debug_info    0x0000056e      0x10a common.o
+ .debug_info    0x00000678     0x278e standby_clock.o
+ .debug_info    0x00002e06       0xcd standby_ir.o
+ .debug_info    0x00002ed3      0x18e standby_key.o
+ .debug_info    0x00003061      0x342 standby_power.o
+ .debug_info    0x000033a3      0x44c standby_tmr.o
+ .debug_info    0x000037ef      0x29c standby_twi.o
+ .debug_info    0x00003a8b       0xeb standby_usb.o
+ .debug_info    0x00003b76       0x9d standby_delay.o
+ .debug_info    0x00003c13      0x48d dram/dram.o
+ .debug_info    0x000040a0      0x72e dram/dram_init.o
+ .debug_info    0x000047ce       0x9e ./../mem_delay.o
+ .debug_info    0x0000486c      0x1e0 ./../pm_debug.o
+ .debug_info    0x00004a4c       0xa3 ./../mem_mmu_pc_asm.o
+ .debug_info    0x00004aef      0x286 ./../mem_serial.o
+ .debug_info    0x00004d75      0x643 ./../mem_printk.o
+ .debug_info    0x000053b8       0xe9 ./../mem_divlibc.o
+ .debug_info    0x000054a1      0x253 ./../mem_int.o
+ .debug_info    0x000056f4     0x2719 ./../mem_timing.o
+ .debug_info    0x00007e0d       0x9f ./../mem_divlib.o
+
+.debug_abbrev   0x00000000     0x1260
+ .debug_abbrev  0x00000000      0x15d standby.o
+ .debug_abbrev  0x0000015d       0x9c common.o
+ .debug_abbrev  0x000001f9      0x1b9 standby_clock.o
+ .debug_abbrev  0x000003b2       0x4e standby_ir.o
+ .debug_abbrev  0x00000400       0x8b standby_key.o
+ .debug_abbrev  0x0000048b      0x160 standby_power.o
+ .debug_abbrev  0x000005eb      0x11b standby_tmr.o
+ .debug_abbrev  0x00000706      0x11f standby_twi.o
+ .debug_abbrev  0x00000825       0x76 standby_usb.o
+ .debug_abbrev  0x0000089b       0x14 standby_delay.o
+ .debug_abbrev  0x000008af      0x186 dram/dram.o
+ .debug_abbrev  0x00000a35      0x194 dram/dram_init.o
+ .debug_abbrev  0x00000bc9       0x14 ./../mem_delay.o
+ .debug_abbrev  0x00000bdd       0xc0 ./../pm_debug.o
+ .debug_abbrev  0x00000c9d       0x14 ./../mem_mmu_pc_asm.o
+ .debug_abbrev  0x00000cb1      0x112 ./../mem_serial.o
+ .debug_abbrev  0x00000dc3      0x178 ./../mem_printk.o
+ .debug_abbrev  0x00000f3b       0x81 ./../mem_divlibc.o
+ .debug_abbrev  0x00000fbc       0xba ./../mem_int.o
+ .debug_abbrev  0x00001076      0x1d6 ./../mem_timing.o
+ .debug_abbrev  0x0000124c       0x14 ./../mem_divlib.o
+
+.debug_loc      0x00000000     0x1988
+ .debug_loc     0x00000000       0x58 standby.o
+ .debug_loc     0x00000058       0x58 common.o
+ .debug_loc     0x000000b0      0x420 standby_clock.o
+ .debug_loc     0x000004d0       0xb0 standby_ir.o
+ .debug_loc     0x00000580       0x84 standby_key.o
+ .debug_loc     0x00000604      0x108 standby_power.o
+ .debug_loc     0x0000070c      0x134 standby_tmr.o
+ .debug_loc     0x00000840       0xb0 standby_twi.o
+ .debug_loc     0x000008f0       0xb0 standby_usb.o
+ .debug_loc     0x000009a0      0x344 dram/dram.o
+ .debug_loc     0x00000ce4      0x478 dram/dram_init.o
+ .debug_loc     0x0000115c      0x134 ./../pm_debug.o
+ .debug_loc     0x00001290      0x18c ./../mem_serial.o
+ .debug_loc     0x0000141c      0x254 ./../mem_printk.o
+ .debug_loc     0x00001670       0x58 ./../mem_divlibc.o
+ .debug_loc     0x000016c8       0xb0 ./../mem_int.o
+ .debug_loc     0x00001778      0x210 ./../mem_timing.o
+
+.debug_aranges  0x00000000      0x2a0
+ .debug_aranges
+                0x00000000       0x20 standby.o
+ .debug_aranges
+                0x00000020       0x20 common.o
+ .debug_aranges
+                0x00000040       0x20 standby_clock.o
+ .debug_aranges
+                0x00000060       0x20 standby_ir.o
+ .debug_aranges
+                0x00000080       0x20 standby_key.o
+ .debug_aranges
+                0x000000a0       0x20 standby_power.o
+ .debug_aranges
+                0x000000c0       0x20 standby_tmr.o
+ .debug_aranges
+                0x000000e0       0x20 standby_twi.o
+ .debug_aranges
+                0x00000100       0x20 standby_usb.o
+ .debug_aranges
+                0x00000120       0x20 standby_delay.o
+ .debug_aranges
+                0x00000140       0x20 dram/dram.o
+ .debug_aranges
+                0x00000160       0x20 dram/dram_init.o
+ .debug_aranges
+                0x00000180       0x20 ./../mem_delay.o
+ .debug_aranges
+                0x000001a0       0x20 ./../pm_debug.o
+ .debug_aranges
+                0x000001c0       0x20 ./../mem_mmu_pc_asm.o
+ .debug_aranges
+                0x000001e0       0x20 ./../mem_serial.o
+ .debug_aranges
+                0x00000200       0x20 ./../mem_printk.o
+ .debug_aranges
+                0x00000220       0x20 ./../mem_divlibc.o
+ .debug_aranges
+                0x00000240       0x20 ./../mem_int.o
+ .debug_aranges
+                0x00000260       0x20 ./../mem_timing.o
+ .debug_aranges
+                0x00000280       0x20 ./../mem_divlib.o
+
+.debug_line     0x00000000     0x1647
+ .debug_line    0x00000000      0x1ea standby.o
+ .debug_line    0x000001ea       0x83 common.o
+ .debug_line    0x0000026d      0x1b2 standby_clock.o
+ .debug_line    0x0000041f       0x5e standby_ir.o
+ .debug_line    0x0000047d       0x78 standby_key.o
+ .debug_line    0x000004f5      0x11c standby_power.o
+ .debug_line    0x00000611       0xc3 standby_tmr.o
+ .debug_line    0x000006d4      0x177 standby_twi.o
+ .debug_line    0x0000084b       0x5f standby_usb.o
+ .debug_line    0x000008aa       0x49 standby_delay.o
+ .debug_line    0x000008f3      0x12f dram/dram.o
+ .debug_line    0x00000a22      0x308 dram/dram_init.o
+ .debug_line    0x00000d2a       0x49 ./../mem_delay.o
+ .debug_line    0x00000d73       0xb0 ./../pm_debug.o
+ .debug_line    0x00000e23      0x15e ./../mem_mmu_pc_asm.o
+ .debug_line    0x00000f81       0xde ./../mem_serial.o
+ .debug_line    0x0000105f      0x2c6 ./../mem_printk.o
+ .debug_line    0x00001325       0x69 ./../mem_divlibc.o
+ .debug_line    0x0000138e       0xd2 ./../mem_int.o
+ .debug_line    0x00001460      0x166 ./../mem_timing.o
+ .debug_line    0x000015c6       0x81 ./../mem_divlib.o
+
+.debug_str      0x00000000     0x2602
+ .debug_str     0x00000000      0x55a standby.o
+                                0x5b5 (size before relaxing)
+ .debug_str     0x0000055a       0x46 common.o
+                                0x148 (size before relaxing)
+ .debug_str     0x000005a0     0x11ea standby_clock.o
+                               0x142d (size before relaxing)
+ .debug_str     0x0000178a       0x51 standby_ir.o
+                                0x149 (size before relaxing)
+ .debug_str     0x000017db       0xd2 standby_key.o
+                                0x1d0 (size before relaxing)
+ .debug_str     0x000018ad      0x104 standby_power.o
+                                0x296 (size before relaxing)
+ .debug_str     0x000019b1      0x1db standby_tmr.o
+                                0x345 (size before relaxing)
+ .debug_str     0x00001b8c      0x11c standby_twi.o
+                                0x24c (size before relaxing)
+ .debug_str     0x00001ca8       0x65 standby_usb.o
+                                0x168 (size before relaxing)
+ .debug_str     0x00001d0d      0x1f4 dram/dram.o
+                                0x322 (size before relaxing)
+ .debug_str     0x00001f01      0x23f dram/dram_init.o
+                                0x47c (size before relaxing)
+ .debug_str     0x00002140       0x82 ./../pm_debug.o
+                                0x191 (size before relaxing)
+ .debug_str     0x000021c2       0xad ./../mem_serial.o
+                                0x1bc (size before relaxing)
+ .debug_str     0x0000226f       0xf0 ./../mem_printk.o
+                                0x225 (size before relaxing)
+ .debug_str     0x0000235f       0x48 ./../mem_divlibc.o
+                                0x14c (size before relaxing)
+ .debug_str     0x000023a7       0x71 ./../mem_int.o
+                                0x285 (size before relaxing)
+ .debug_str     0x00002418      0x1ea ./../mem_timing.o
+                               0x1363 (size before relaxing)
+
+.comment        0x00000000       0x64
+ .comment       0x00000000       0x64 standby.o
+                                 0x65 (size before relaxing)
+ .comment       0x00000000       0x65 common.o
+ .comment       0x00000000       0x65 standby_clock.o
+ .comment       0x00000000       0x65 standby_ir.o
+ .comment       0x00000000       0x65 standby_key.o
+ .comment       0x00000000       0x65 standby_power.o
+ .comment       0x00000000       0x65 standby_tmr.o
+ .comment       0x00000000       0x65 standby_twi.o
+ .comment       0x00000000       0x65 standby_usb.o
+ .comment       0x00000000       0x65 dram/dram.o
+ .comment       0x00000000       0x65 dram/dram_init.o
+ .comment       0x00000000       0x65 ./../pm_debug.o
+ .comment       0x00000000       0x65 ./../mem_serial.o
+ .comment       0x00000000       0x65 ./../mem_printk.o
+ .comment       0x00000000       0x65 ./../mem_divlibc.o
+ .comment       0x00000000       0x65 ./../mem_int.o
+ .comment       0x00000000       0x65 ./../mem_timing.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 standby.o
+ .note.GNU-stack
+                0x00000000        0x0 common.o
+ .note.GNU-stack
+                0x00000000        0x0 standby_clock.o
+ .note.GNU-stack
+                0x00000000        0x0 standby_ir.o
+ .note.GNU-stack
+                0x00000000        0x0 standby_key.o
+ .note.GNU-stack
+                0x00000000        0x0 standby_power.o
+ .note.GNU-stack
+                0x00000000        0x0 standby_tmr.o
+ .note.GNU-stack
+                0x00000000        0x0 standby_twi.o
+ .note.GNU-stack
+                0x00000000        0x0 standby_usb.o
+ .note.GNU-stack
+                0x00000000        0x0 dram/dram.o
+ .note.GNU-stack
+                0x00000000        0x0 dram/dram_init.o
+ .note.GNU-stack
+                0x00000000        0x0 ./../pm_debug.o
+ .note.GNU-stack
+                0x00000000        0x0 ./../mem_serial.o
+ .note.GNU-stack
+                0x00000000        0x0 ./../mem_printk.o
+ .note.GNU-stack
+                0x00000000        0x0 ./../mem_divlibc.o
+ .note.GNU-stack
+                0x00000000        0x0 ./../mem_int.o
+ .note.GNU-stack
+                0x00000000        0x0 ./../mem_timing.o
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x35 standby.o
+ .ARM.attributes
+                0x00000035       0x35 common.o
+ .ARM.attributes
+                0x0000006a       0x35 standby_clock.o
+ .ARM.attributes
+                0x0000009f       0x35 standby_ir.o
+ .ARM.attributes
+                0x000000d4       0x35 standby_key.o
+ .ARM.attributes
+                0x00000109       0x35 standby_power.o
+ .ARM.attributes
+                0x0000013e       0x35 standby_tmr.o
+ .ARM.attributes
+                0x00000173       0x35 standby_twi.o
+ .ARM.attributes
+                0x000001a8       0x35 standby_usb.o
+ .ARM.attributes
+                0x000001dd       0x21 standby_delay.o
+ .ARM.attributes
+                0x000001fe       0x35 dram/dram.o
+ .ARM.attributes
+                0x00000233       0x35 dram/dram_init.o
+ .ARM.attributes
+                0x00000268       0x21 ./../mem_delay.o
+ .ARM.attributes
+                0x00000289       0x35 ./../pm_debug.o
+ .ARM.attributes
+                0x000002be       0x21 ./../mem_mmu_pc_asm.o
+ .ARM.attributes
+                0x000002df       0x35 ./../mem_serial.o
+ .ARM.attributes
+                0x00000314       0x35 ./../mem_printk.o
+ .ARM.attributes
+                0x00000349       0x35 ./../mem_divlibc.o
+ .ARM.attributes
+                0x0000037e       0x35 ./../mem_int.o
+ .ARM.attributes
+                0x000003b3       0x35 ./../mem_timing.o
+ .ARM.attributes
+                0x000003e8       0x21 ./../mem_divlib.o
+
+.debug_frame    0x00000000     0x100c
+ .debug_frame   0x00000000       0x4c standby.o
+ .debug_frame   0x0000004c       0x44 common.o
+ .debug_frame   0x00000090      0x254 standby_clock.o
+ .debug_frame   0x000002e4       0x70 standby_ir.o
+ .debug_frame   0x00000354       0x5c standby_key.o
+ .debug_frame   0x000003b0       0xb0 standby_power.o
+ .debug_frame   0x00000460       0xc0 standby_tmr.o
+ .debug_frame   0x00000520       0x78 standby_twi.o
+ .debug_frame   0x00000598       0x70 standby_usb.o
+ .debug_frame   0x00000608      0x214 dram/dram.o
+ .debug_frame   0x0000081c      0x2b8 dram/dram_init.o
+ .debug_frame   0x00000ad4       0xc0 ./../pm_debug.o
+ .debug_frame   0x00000b94       0xf4 ./../mem_serial.o
+ .debug_frame   0x00000c88      0x180 ./../mem_printk.o
+ .debug_frame   0x00000e08       0x44 ./../mem_divlibc.o
+ .debug_frame   0x00000e4c       0x74 ./../mem_int.o
+ .debug_frame   0x00000ec0      0x14c ./../mem_timing.o

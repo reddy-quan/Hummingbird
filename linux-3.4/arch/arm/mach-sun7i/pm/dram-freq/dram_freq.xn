@@ -1,0 +1,21 @@
+
+OUTPUT_ARCH(arm)
+ENTRY(dram_freq_main)
+
+SECTIONS
+{
+	__dram_freq_start = .;
+	.text 0xf0000000 :
+	{
+    	*(.dram_main)
+		*(.text)
+		*(.rodata)
+	}
+
+	.data   : { *(.data) }
+	__bss_start = . ;
+	.bss : { *(.sbss) *(.scommon) *(.bss) *(COMMON) }
+	__bss_end = .;
+	__dram_freq_end = . ;
+}
+
