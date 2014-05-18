@@ -114,5 +114,6 @@ insmod /system/vendor/modules/sunxi_gmac.ko
 #qj /Qmerrii -qws &
 ifconfig eth0 hw ether 06:94:A4:F1:64:D4
 ifconfig eth0 up
-killall udhcpc && udhcpc -i eth0
+killall udhcpc
+udhcpc -i eth0 &
 
