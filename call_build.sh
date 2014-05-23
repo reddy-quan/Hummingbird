@@ -15,3 +15,5 @@ sh ./build.sh -p sun7i_dragonboard | tee -a build.log
 #cp -rf tools/pack/sun7i_dragonboard_wing-k70.img images/sun7i_dragonboard_wing-k70.img
 
 echo "rootfs is at: ./buildroot/target/dragonboard/rootfs"
+
+#make menuconfig sun7ismp_android_defconfig ARCH=arm
