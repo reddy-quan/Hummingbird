@@ -34,9 +34,9 @@ if [ $nand_activated -eq 1 ]; then
 
 fi
 
-insmod /system/vendor/modules/disp.ko
-insmod /system/vendor/modules/lcd.ko
-insmod /system/vendor/modules/hdmi.ko
+#insmod /system/vendor/modules/disp.ko
+#insmod /system/vendor/modules/lcd.ko
+#insmod /system/vendor/modules/hdmi.ko
 # insmod ir driver
 ir_activated=`script_fetch "ir" "activated"`
 if [ $ir_activated -eq 1 ]; then
@@ -112,6 +112,10 @@ insmod /system/vendor/modules/sunxi_gmac.ko
 /dragonboard/bin/hdmitester 0 0 0 0 &
 #sleep 4
 #qj /Qmerrii -qws &
+mkdir /mnt/vfs
+export LD_LIBRARY_PATH=/mnt/vfs/lib
+export PATH=$PATH:/mnt/vfs/bin:/mnt/vfs/sbin:/mnt/vfs/usr/bin
+
 ifconfig eth0 hw ether 06:94:A4:F1:64:D4
 ifconfig eth0 up
 killall udhcpc

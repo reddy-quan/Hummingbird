@@ -17,3 +17,7 @@ sh ./build.sh -p sun7i_dragonboard | tee -a build.log
 echo "rootfs is at: ./buildroot/target/dragonboard/rootfs"
 
 #make menuconfig sun7ismp_android_defconfig ARCH=arm
+#mount -t nfs -o nolock 192.168.1.103:/home/reddy /mnt/vfs
+
+#mount -t vfat /dev/sda /mnt/disk
+
