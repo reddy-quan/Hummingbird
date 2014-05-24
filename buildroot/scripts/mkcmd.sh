@@ -470,7 +470,7 @@ function mkrootfs()
         (cd ${LICHEE_BR_DIR}/target/dragonboard; \
         	if [ ! -d "./rootfs" ]; then \
         	echo "extract dragonboard rootfs.tar.gz"; \
-        	cp -rf rootfs.copy rootfs; \
+        	tar zxf rootfs.tar.gz; \
         	fi \
         )
 		mkdir -p ${LICHEE_BR_DIR}/target/dragonboard/rootfs/lib/modules

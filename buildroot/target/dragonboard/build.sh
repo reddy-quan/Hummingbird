@@ -3,8 +3,7 @@
 # sysroot exist?
 if [ ! -d "./sysroot" ]; then
     echo "extract dragonboard sysroot.tar.gz"
-    #tar zxf sysroot.tar.gz
-	cp -rf sysroot.copy sysroot
+    tar zxf sysroot.tar.gz
 fi
 
 if [ ! -d "./output/bin" ]; then
