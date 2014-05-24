@@ -1,10 +1,18 @@
 1.
-固件烧写方法：在关机状态下，按住uboot键，再按电源键开机！
+固件烧写方法：在电脑上打开PhoenixSuit，长按板子的电源直至关机，按住uboot键，再按电源键开机！
 
 2.
 直接下载下来的代码是编不过的，需要rootfs和sysroot的。这两个文件合起来有200多M，Github上最大只能传50M的文件所以没上传！
+这两个文件我放在本地了。
+
+3.
+内核配置方法：
+make menuconfig sun7ismp_android_defconfig ARCH=arm
+注：编译时默认会在内核目录下先找.config，找不到再使用sun7ismp_android_defconfig
 
 
+
+其它：
 计划用此板做一个小型内核开发板及小型应用开发板。不需显示界面等其它工具，主要用它做小型Server和验证嵌入式开发的工具。
 基于此：
 本人有一块SSD1306 OLED屏计划后续移上来，所以本套源代码已经去掉了原版本中的QT上层应用。
