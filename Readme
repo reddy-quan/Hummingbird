@@ -7,8 +7,10 @@
 
 3.
 内核配置方法：
-make menuconfig sun7ismp_android_defconfig ARCH=arm
+make menuconfig sun7ismp_android_defconfig ARCH=arm #删除linux3.4目录下的.config
 注：编译时默认会在内核目录下先找.config，找不到再使用sun7ismp_android_defconfig
+
+如果编译出错，先删除linux3.4目录下的.config再重试。
 
 
 
@@ -21,5 +23,3 @@ make menuconfig sun7ismp_android_defconfig ARCH=arm
 在本工程中合入其它模块，组建一个小型系统，计划实现webserver等其它功能。
 
 
-内核配置文件：
-sun7ismp_android_defconfig
