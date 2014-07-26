@@ -21,3 +21,5 @@ make menuconfig sun7ismp_android_defconfig ARCH=arm
 在本工程中合入其它模块，组建一个小型系统，计划实现webserver等其它功能。
 
 
+内核配置文件：
+sun7ismp_android_defconfig
